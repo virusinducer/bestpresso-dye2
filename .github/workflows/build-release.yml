@@ -1,0 +1,152 @@
+name: Build and release
+
+# Daily: look for new Bestpresso or DYE2 tags (betas and patches included) and, if either moved,
+# rebuild both, test, and publish. Also runs when the patches or tooling change, and on demand.
+on:
+  schedule:
+    - cron: '17 4 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'patches/**'
+      - 'assets/**'
+      - 'scripts/**'
+      - 'test/**'
+      - 'package.json'
+      - '.github/workflows/build-release.yml'
+  workflow_dispatch:
+    inputs:
+      bestpresso_tag:
+        description: 'Bestpresso tag to build (blank = newest)'
+        required: false
+      dye2_tag:
+        description: 'DYE2 tag to build (blank = newest)'
+        required: false
+      force:
+        description: 'Publish even if neither upstream changed'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Find newest upstream tags
+        id: upstream
+        env:
+          BESTPRESSO_TAG: ${{ inputs.bestpresso_tag }}
+          DYE2_TAG: ${{ inputs.dye2_tag }}
+        run: |
+          args=()
+          if [ -n "$BESTPRESSO_TAG" ]; then args+=(--bestpresso "$BESTPRESSO_TAG"); fi
+          if [ -n "$DYE2_TAG" ]; then args+=(--dye2 "$DYE2_TAG"); fi
+          node scripts/watch.mjs "${args[@]}"
+
+      - name: Decide whether to publish
+        id: gate
+        run: |
+          publish=true
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ steps.upstream.outputs.changed }}" != "true" ]; then
+            publish=false
+          fi
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "publish=$publish (event=${{ github.event_name }}, upstream changed=${{ steps.upstream.outputs.changed }})"
+
+      - name: Next build number
+        id: build
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          last=$(git tag --list 'v1.0.*' | sed 's/^v1\.0\.//' | sort -n | tail -1)
+          echo "number=$(( ${last:-0} + 1 ))" >> "$GITHUB_OUTPUT"
+
+      - name: Build skin and plugin
+        if: steps.gate.outputs.publish == 'true'
+        run: >
+          node scripts/build.mjs
+          --bestpresso "${{ steps.upstream.outputs.bestpresso }}"
+          --dye2 "${{ steps.upstream.outputs.dye2 }}"
+          --build "${{ steps.build.outputs.number }}"
+          --out out --work .work
+
+      - name: End-to-end test in a browser
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          SKIN_DIR="$PWD/out/skin" PLUGIN_JS="$PWD/.work/dye2/dye2.reaplugin/plugin.js" \
+            node test/e2e/mock-decaid.mjs &
+          sleep 3
+          python test/e2e/button.e2e.py
+
+      - name: Check the release carries exactly one zip
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          count=$(ls out/*.zip | wc -l)
+          [ "$count" = "1" ] || { echo "expected exactly one zip in out/, found $count"; exit 1; }
+
+      - name: Publish the skin to the dist branch
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          rm -rf .dist && cp -r out/skin .dist && cd .dist
+          git init -q -b dist
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Skin ${{ steps.upstream.outputs.bestpresso }} + DYE2 button (build ${{ steps.build.outputs.number }})"
+          git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" dist
+
+      - name: Record what was built
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          printf '{\n  "bestpresso": "%s",\n  "dye2": "%s"\n}\n' \
+            "${{ steps.upstream.outputs.bestpresso }}" "${{ steps.upstream.outputs.dye2 }}" > upstream.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add upstream.json
+          git diff --cached --quiet || git commit -q -m "Built from Bestpresso ${{ steps.upstream.outputs.bestpresso }} and DYE2 ${{ steps.upstream.outputs.dye2 }}"
+          git push -q origin HEAD:main
+
+      - name: Publish the plugin release
+        if: steps.gate.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="v1.0.${{ steps.build.outputs.number }}"
+          gh release create "$tag" out/dye2.reaplugin-"$tag".zip \
+            --title "$tag" \
+            --notes "Plugin built from decentespresso/dye2 ${{ steps.upstream.outputs.dye2 }}. The matching skin (xinghendri/bestpresso ${{ steps.upstream.outputs.bestpresso }}) is on the dist branch."
+
+      - name: Open an issue when the build fails
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create build-failed --color B60205 --description "Automated build failed" 2>/dev/null || true
+          url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          title="Build failed for Bestpresso ${{ steps.upstream.outputs.bestpresso }} / DYE2 ${{ steps.upstream.outputs.dye2 }}"
+          existing=$(gh issue list --label build-failed --state open --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body "Failed again: $url"
+          else
+            gh issue create --label build-failed --title "$title" --body "The automated build failed, so the last good release stays in place. Run: $url"
+          fi
