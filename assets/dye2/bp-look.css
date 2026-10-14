@@ -65,10 +65,15 @@
       background: rgba(255,255,255,.10) !important; border-color: var(--mimoja-blue); }
     .dye-form-input-wrap:focus-within .dye-form-input, .dye-form-input-wrap:focus-within .dye-form-textarea,
     .re-input-row:focus-within .re-input { color: #f5f5f5; }
-    /* Cancel buttons: secondary action, thin outline with no fill so the primary stays the only filled button */
-    #dye-cancel-btn, .dye-btn-ghost {
-      background: transparent !important;
-      border: 1.5px solid rgba(255,255,255,.35) !important; color: var(--text-primary) !important; }
-    #dye-cancel-btn:active, .dye-btn-ghost:active { background: rgba(255,255,255,.10) !important; }
+    /* Cancel and other secondary buttons: thin outline, no fill, so the green primary stays the only filled button */
+    #dye-cancel-btn, #es-cancel-btn, #re-cancel-btn, #afe-cancel-btn, .dye-btn-ghost, .viz-btn-cancel,
+    #es-drinker-notes-cancel, #es-equip-values-cancel, #eq-values-cancel {
+      background: transparent !important; border: 1.5px solid rgba(255,255,255,.35) !important; }
+    #dye-cancel-btn, #es-cancel-btn, #re-cancel-btn, #afe-cancel-btn, .dye-btn-ghost,
+    #es-drinker-notes-cancel, #es-equip-values-cancel, #eq-values-cancel { color: var(--text-primary) !important; }
+    #es-cancel-btn, #re-cancel-btn { border-radius: 68px !important; }
+    #dye-cancel-btn:active, #es-cancel-btn:active, #re-cancel-btn:active, #afe-cancel-btn:active, .dye-btn-ghost:active,
+    .viz-btn-cancel:active, #es-drinker-notes-cancel:active, #es-equip-values-cancel:active, #eq-values-cancel:active {
+      background: rgba(255,255,255,.10) !important; }
     .afav-header #dye-cancel-btn { color: var(--text-primary) !important; }
 
