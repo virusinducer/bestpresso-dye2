@@ -51,22 +51,33 @@ The skin installs as `bestpresso-dye` ("Bestpresso + DYE2"), next to stock Bestp
 
 ## Versions
 
-- Plugin releases are `v1.0.N`. The version is our own because Decaid refuses downgrades and upstream
-  DYE2 numbers are lower. The upstream DYE2 tag is in the release notes.
-- A release carries exactly one zip, as Decaid requires. The skin lives on the `dist` branch.
+- The plugin version is exactly the DYE2 version it is built from (DYE2 `v0.1.19` gives plugin `0.1.19`).
+  The skin version is exactly the Bestpresso version (`0.1.32-patch005`). Nothing of ours is added.
+- A new DYE2 or Bestpresso release is picked up daily and published under its own new version, so
+  Decaid sees a normal update.
+- When only our patches change (a fix to the button or the restyle), the version stays the same, so
+  Decaid does not offer an update. Remove and reinstall the plugin or skin to pick it up.
+- A plugin release carries exactly one zip, as Decaid requires. The skin lives on the `dist` branch and is
+  republished as a release by [bestpresso-dye-skin](https://github.com/virusinducer/bestpresso-dye-skin).
 - `upstream.json` records the upstream tags the last release was built from.
 
 ## Development
 
 ```
 npm test                                   # unit tests
-node scripts/build.mjs --bestpresso v0.1.32-patch005 --dye2 v0.1.19 --build 1 --out out
+node scripts/build.mjs --bestpresso v0.1.32-patch005 --dye2 v0.1.19 --out out
 SKIN_DIR=$PWD/out/skin PLUGIN_JS=$PWD/.work/dye2/dye2.reaplugin/plugin.js node test/e2e/mock-decaid.mjs &
 python3 test/e2e/button.e2e.py             # needs playwright + chromium
 ```
 
-## Credits and licensing
+## Credits
 
-Bestpresso is by Hendri (xinghendri), who has said it is open source; the repository does not yet carry
-a LICENSE file. DYE2 and Decaid are by Decent Espresso. This repository contains only patches,
-the button and the build tooling, and fetches upstream sources at build time.
+- **Bestpresso** is by Hendri ([xinghendri/bestpresso](https://github.com/xinghendri/bestpresso)). The skin
+  here is his work with a small patch for the DYE2 button. Hendri has said it is open source; the
+  repository does not yet carry a LICENSE file.
+- **DYE2** is by the DYE2 makers at Decent Espresso ([decentespresso/dye2](https://github.com/decentespresso/dye2)).
+  The plugin here is their work, restyled to match Bestpresso.
+- **Decaid** and the DE1 are by Decent Espresso.
+
+This repository contains only the patches, the button, the restyle and the build tooling. Upstream sources
+are fetched at build time and are not copied here.

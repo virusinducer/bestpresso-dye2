@@ -1,14 +1,13 @@
 import { join } from 'node:path'
 import { editJson } from '../../scripts/lib/patch.mjs'
 
-// Same plugin id as upstream, so enabling this build replaces stock DYE2. The version is our own
-// release number (1.0.N) because Decaid refuses downgrades and upstream versions are lower.
-export function apply({ root, upstreamTag, pluginVersion }) {
+// Same plugin id and version as upstream DYE2, so enabling this build replaces stock DYE2 (same
+// settings and data) and the version always matches the DYE2 release it was built from.
+export function apply({ root, upstreamTag }) {
   editJson(join(root, 'dye2-plugin', 'manifest.src.json'), (manifest) => {
     manifest.name = 'DYE2 for Bestpresso'
-    manifest.version = pluginVersion
-    manifest.description = `${manifest.description} Built from decentespresso/dye2 ${upstreamTag} with a Bestpresso button endpoint.`
+    manifest.author = 'Decent Espresso (decentespresso/dye2), adapted by virusinducer'
+    manifest.description = `${manifest.description} Based on DYE2 ${upstreamTag} by Decent Espresso, restyled for the Bestpresso skin by Hendri, with a button endpoint for the Bestpresso + DYE2 skin.`
     manifest.api.push({ id: 'bestpresso-button', type: 'http', data: {} })
   })
-  editJson(join(root, 'dye2-plugin', 'package.json'), (pkg) => { pkg.version = pluginVersion })
 }

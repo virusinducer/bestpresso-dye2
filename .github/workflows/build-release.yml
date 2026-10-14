@@ -72,21 +72,20 @@ jobs:
           echo "publish=$publish" >> "$GITHUB_OUTPUT"
           echo "publish=$publish (event=${{ github.event_name }}, upstream changed=${{ steps.upstream.outputs.changed }})"
 
-      - name: Next build number
-        id: build
-        if: steps.gate.outputs.publish == 'true'
-        run: |
-          last=$(git tag --list 'v1.0.*' | sed 's/^v1\.0\.//' | sort -n | tail -1)
-          echo "number=$(( ${last:-0} + 1 ))" >> "$GITHUB_OUTPUT"
-
       - name: Build skin and plugin
         if: steps.gate.outputs.publish == 'true'
         run: >
           node scripts/build.mjs
           --bestpresso "${{ steps.upstream.outputs.bestpresso }}"
           --dye2 "${{ steps.upstream.outputs.dye2 }}"
-          --build "${{ steps.build.outputs.number }}"
           --out out --work .work
+
+      - name: Read the built versions
+        id: versions
+        if: steps.gate.outputs.publish == 'true'
+        run: |
+          echo "plugin=$(jq -r .version .work/dye2/dye2.reaplugin/manifest.json)" >> "$GITHUB_OUTPUT"
+          echo "skin=$(jq -r .version out/skin/skin-manifest.json)" >> "$GITHUB_OUTPUT"
 
       - name: End-to-end test in a browser
         if: steps.gate.outputs.publish == 'true'
@@ -112,7 +111,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "Skin ${{ steps.upstream.outputs.bestpresso }} + DYE2 button (build ${{ steps.build.outputs.number }})"
+          git commit -q -m "Skin ${{ steps.versions.outputs.skin }} with the DYE2 button"
           git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" dist
 
       - name: Record what was built
@@ -130,11 +129,21 @@ jobs:
         if: steps.gate.outputs.publish == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.versions.outputs.plugin }}
+          DYE2_TAG: ${{ steps.upstream.outputs.dye2 }}
+          BESTPRESSO_TAG: ${{ steps.upstream.outputs.bestpresso }}
+          EVENT: ${{ github.event_name }}
         run: |
-          tag="v1.0.${{ steps.build.outputs.number }}"
+          tag="v$VERSION"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            # The plugin version is DYE2's own, so a Bestpresso-only update leaves it alone. Our own
+            # patch changes (push or manual run) replace the release under the same version.
+            if [ "$EVENT" = "schedule" ]; then echo "$tag already released"; exit 0; fi
+            gh release delete "$tag" --cleanup-tag --yes
+          fi
           gh release create "$tag" out/dye2.reaplugin-"$tag".zip \
             --title "$tag" \
-            --notes "Plugin built from decentespresso/dye2 ${{ steps.upstream.outputs.dye2 }}. The matching skin (xinghendri/bestpresso ${{ steps.upstream.outputs.bestpresso }}) is on the dist branch."
+            --notes "DYE2 $DYE2_TAG by Decent Espresso (decentespresso/dye2), restyled for Bestpresso, with the DYE2 button endpoint. Matching skin: virusinducer/bestpresso-dye-skin (Bestpresso $BESTPRESSO_TAG by Hendri)."
 
       - name: Open an issue when the build fails
         if: failure()

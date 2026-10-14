@@ -31,7 +31,7 @@ createServer(async (req, res) => {
   }
   if (url.pathname === '/api/v1/plugins') {
     const list = [{ id: 'settings.reaplugin', loaded: true }]
-    if (state !== 'removed') list.push({ id: 'dye2.reaplugin', name: 'Streamline/DYE2', loaded: state === 'loaded', autoLoad: state === 'loaded' })
+    if (state !== 'removed') list.push({ id: 'dye2.reaplugin', name: 'DYE2 for Bestpresso', loaded: state === 'loaded', autoLoad: state === 'loaded' })
     res.writeHead(200, { ...cors, 'Content-Type': 'application/json' }); return res.end(JSON.stringify(list))
   }
   const endpoint = /^\/api\/v1\/plugins\/dye2\.reaplugin\/([^/]+)$/.exec(url.pathname)

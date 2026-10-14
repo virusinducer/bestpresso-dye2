@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Build the patched Bestpresso skin and the patched DYE2 plugin from upstream tags.
 //
-//   node scripts/build.mjs --bestpresso v0.1.32-patch005 --dye2 v0.1.19 --build 1 [--out out] [--skip-tests]
+//   node scripts/build.mjs --bestpresso v0.1.32-patch005 --dye2 v0.1.19 [--out out] [--skip-tests]
 //
 // Output (in --out):
 //   skin/                                the built skin (index.html, assets, skin-manifest.json)
@@ -17,18 +17,15 @@ const { values } = parseArgs({
   options: {
     bestpresso: { type: 'string' },
     dye2: { type: 'string' },
-    build: { type: 'string' },
     out: { type: 'string', default: 'out' },
     work: { type: 'string', default: '.work' },
     'skip-tests': { type: 'boolean', default: false },
   },
 })
-for (const key of ['bestpresso', 'dye2', 'build']) {
+for (const key of ['bestpresso', 'dye2']) {
   if (!values[key]) throw new Error(`missing --${key}`)
 }
 
-const buildNumber = Number(values.build)
-const pluginVersion = `1.0.${buildNumber}`
 const out = resolve(values.out)
 const work = resolve(values.work)
 
@@ -56,7 +53,7 @@ mkdirSync(work, { recursive: true })
 // Skin
 const skinRoot = join(work, 'bestpresso')
 clone('xinghendri/bestpresso', values.bestpresso, skinRoot)
-await applyPatches('bestpresso', { root: skinRoot, repoRoot, upstreamTag: values.bestpresso, buildNumber })
+await applyPatches('bestpresso', { root: skinRoot, repoRoot, upstreamTag: values.bestpresso })
 run('npm', ['ci', '--silent'], skinRoot)
 if (!values['skip-tests']) run('npm', ['test', '--silent'], skinRoot)
 run('npm', ['run', '-s', 'build'], skinRoot)
@@ -65,6 +62,9 @@ cpSync(join(skinRoot, 'dist'), join(out, 'skin'), { recursive: true })
 // Plugin
 const dye2Root = join(work, 'dye2')
 clone('decentespresso/dye2', values.dye2, dye2Root)
+// The plugin version is exactly the version DYE2 itself declares (its manifest), which Decaid also
+// requires the release tag to match. It can differ from the git tag.
+const pluginVersion = JSON.parse(readFileSync(join(dye2Root, 'dye2-plugin', 'manifest.src.json'), 'utf8')).version
 await applyPatches('dye2', { root: dye2Root, repoRoot, upstreamTag: values.dye2, pluginVersion })
 const pluginDir = join(dye2Root, 'dye2-plugin')
 run('npm', ['ci', '--silent'], pluginDir)
@@ -82,6 +82,7 @@ if (manifest.version !== pluginVersion) throw new Error(`manifest version ${mani
 if (!manifest.api.some((entry) => entry.id === 'bestpresso-button')) throw new Error('button endpoint missing from manifest')
 if (!readFileSync(join(pluginOut, 'plugin.js'), 'utf8').includes('__bestpressoDye2')) throw new Error('button script missing from plugin.js')
 const skinManifest = JSON.parse(readFileSync(join(out, 'skin', 'skin-manifest.json'), 'utf8'))
+if (skinManifest.version !== values.bestpresso.replace(/^v/, '')) throw new Error(`skin version ${skinManifest.version} != Bestpresso ${values.bestpresso}`)
 if (skinManifest.id !== 'bestpresso-dye') throw new Error(`unexpected skin id ${skinManifest.id}`)
 if (!existsSync(join(out, 'skin', 'index.html'))) throw new Error('skin index.html missing')
 if (!readFileSync(join(out, 'skin', 'index.html'), 'utf8').length) throw new Error('empty index.html')
