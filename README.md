@@ -1,4 +1,4 @@
-# bestpresso-dye2
+# bestpresso-dye2-plugin
 
 A DYE2 button for the [Bestpresso](https://github.com/xinghendri/bestpresso) Decaid skin, delivered as
 a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstream moves.
@@ -20,22 +20,22 @@ Replace `<decaid-host>` with the machine Decaid runs on (`localhost` on the same
 ```
 curl -X POST http://<decaid-host>:8080/api/v1/plugins/install/github-release \
   -H 'content-type: application/json' \
-  -d '{"repo": "virusinducer/bestpresso-dye2"}'
+  -d '{"repo": "virusinducer/bestpresso-dye2-plugin"}'
 ```
 
-**2. Skin** (installs from its own repo, `virusinducer/bestpresso-dye-skin`, which republishes each build as a release):
+**2. Skin** (installs from its own repo, `virusinducer/bestpresso-dye2-skin`, which republishes each build as a release):
 
 ```
 curl -X POST http://<decaid-host>:8080/api/v1/webui/skins/install/github-release \
   -H 'content-type: application/json' \
-  -d '{"repo": "virusinducer/bestpresso-dye-skin"}'
+  -d '{"repo": "virusinducer/bestpresso-dye2-skin"}'
 curl -X PUT http://<decaid-host>:8080/api/v1/webui/skins/default \
   -H 'content-type: application/json' -d '{"skinId": "bestpresso-dye"}'
 curl -X POST http://<decaid-host>:8080/api/v1/webui/server/stop
 curl -X POST http://<decaid-host>:8080/api/v1/webui/server/start
 ```
 
-In Decaid's screens: plugin screen `virusinducer/bestpresso-dye2`, skin screen `virusinducer/bestpresso-dye-skin`.
+In Decaid's screens: plugin screen `virusinducer/bestpresso-dye2-plugin`, skin screen `virusinducer/bestpresso-dye2-skin`.
 
 The skin installs as `bestpresso-dye` ("Bestpresso + DYE2"), next to stock Bestpresso. The plugin
 ("DYE2 for Bestpresso") keeps the id `dye2.reaplugin`, so it replaces stock DYE2 (same settings and data).
@@ -58,7 +58,7 @@ The skin installs as `bestpresso-dye` ("Bestpresso + DYE2"), next to stock Bestp
 - When only our patches change (a fix to the button or the restyle), the version stays the same, so
   Decaid does not offer an update. Remove and reinstall the plugin or skin to pick it up.
 - A plugin release carries exactly one zip, as Decaid requires. The skin lives on the `dist` branch and is
-  republished as a release by [bestpresso-dye-skin](https://github.com/virusinducer/bestpresso-dye-skin).
+  republished as a release by [bestpresso-dye2-skin](https://github.com/virusinducer/bestpresso-dye2-skin).
 - `upstream.json` records the upstream tags the last release was built from.
 
 ## Development

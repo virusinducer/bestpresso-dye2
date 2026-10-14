@@ -11,7 +11,7 @@ export function apply({ root }) {
     manifest.name = 'Bestpresso + DYE2'
     manifest.author = 'Hendri (xinghendri/bestpresso), DYE2 button by virusinducer'
     manifest.description = `${manifest.description}. Adds a DYE2 button next to Sleep while the DYE2 plugin is loaded.`
-    manifest.repository = 'https://github.com/virusinducer/bestpresso-dye-skin'
+    manifest.repository = 'https://github.com/virusinducer/bestpresso-dye2-skin'
     manifest.upstream = 'https://github.com/xinghendri/bestpresso'
   })
 }
