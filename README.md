@@ -23,20 +23,22 @@ curl -X POST http://<decaid-host>:8080/api/v1/plugins/install/github-release \
   -d '{"repo": "virusinducer/bestpresso-dye2"}'
 ```
 
-**2. Skin** (Decaid tracks the `dist` branch and updates it for you):
+**2. Skin** (installs from its own repo, `virusinducer/bestpresso-dye-skin`, which republishes each build as a release):
 
 ```
-curl -X POST http://<decaid-host>:8080/api/v1/webui/skins/install/github-branch \
+curl -X POST http://<decaid-host>:8080/api/v1/webui/skins/install/github-release \
   -H 'content-type: application/json' \
-  -d '{"repo": "virusinducer/bestpresso-dye2", "branch": "dist"}'
+  -d '{"repo": "virusinducer/bestpresso-dye-skin"}'
 curl -X PUT http://<decaid-host>:8080/api/v1/webui/skins/default \
   -H 'content-type: application/json' -d '{"skinId": "bestpresso-dye"}'
 curl -X POST http://<decaid-host>:8080/api/v1/webui/server/stop
 curl -X POST http://<decaid-host>:8080/api/v1/webui/server/start
 ```
 
-The skin installs as `bestpresso-dye`, next to stock Bestpresso rather than replacing it. The plugin
-keeps the id `dye2.reaplugin`, so it replaces stock DYE2 (same settings and data).
+In Decaid's screens: plugin screen `virusinducer/bestpresso-dye2`, skin screen `virusinducer/bestpresso-dye-skin`.
+
+The skin installs as `bestpresso-dye` ("Bestpresso + DYE2"), next to stock Bestpresso. The plugin
+("DYE2 for Bestpresso") keeps the id `dye2.reaplugin`, so it replaces stock DYE2 (same settings and data).
 
 ## How it works
 
