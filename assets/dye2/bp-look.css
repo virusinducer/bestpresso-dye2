@@ -1,0 +1,68 @@
+    /* ===== Bestpresso look (added by bestpresso-dye-builds) ===== */
+    :root {
+      color-scheme: dark;
+      --bgmain-color: #171717;
+      --mimoja-blue: #3dc078;
+      --dye-on-accent: #0d2618;
+      --dye-label: #ffffff;
+      --dye-star: #f5c542;
+      --dye-field: rgba(255,255,255,.08);
+      --box-color: rgba(64,55,53,.46);
+      --profile-button-outline-color: rgba(255,255,255,.10);
+      --profile-button-background-color: rgba(89,84,80,.8);
+      --text-primary: #f5f5f5;
+      --text-primary-disabled: #8b8782;
+      --low-contrast-white: #8b8782;
+      --fav-button-wait: rgba(255,255,255,.10);
+      --dye-chart-red:   #e5685a;
+      --dye-chart-blue:  #4d8ff0;
+      --dye-chart-green: #3dc078;
+      --dye-chart-pink:  #e89ab0;
+      --dye-surface:     rgba(255,255,255,.05);
+      --dye-border:      rgba(255,255,255,.10);
+    }
+    html { background:
+      radial-gradient(circle at 16% 16%, #060707 0, #141414 22%, transparent 50%),
+      linear-gradient(124deg, #181818 36%, #4d4038 100%) fixed !important; }
+    body { background: transparent !important; }
+    [class*="bg-[var(--bgmain-color)]"] { background: transparent !important; }
+    .bg-white { background-color: var(--box-color) !important; }
+    .bg-white.opacity-40 { background-color: var(--dye-on-accent) !important; }
+    [class*="bg-[#EDEDED]"], [class*="bg-[#EDF0F4]"] { background: var(--profile-button-background-color) !important; }
+    /* filled green buttons: dark text, like a Bestpresso primary action */
+    [class*="bg-[var(--mimoja-blue)]"], [class*="bg-[var(--mimoja-blue)]"] * { color: var(--dye-on-accent) !important; }
+    /* outlined pills: Bestpresso secondary button (green tint, green outline, green text) */
+    [class*="border-[var(--mimoja-blue)]"]:not([class*="bg-[var(--mimoja-blue)]"]):not(input):not(textarea):not(select) {
+      background: rgba(61,192,120,.14) !important; border-color: rgba(61,192,120,.55) !important; color: #53d68e !important; }
+    [class*="border-[var(--mimoja-blue)]"]:not([class*="bg-[var(--mimoja-blue)]"]) * { color: inherit; }
+    [style*="background: var(--mimoja-blue)"], [style*="background:var(--mimoja-blue)"], .dye-seg-btn.active {
+      color: var(--dye-on-accent) !important; }
+    /* pop-up menus (Edit Shot, DYE Settings): dark Bestpresso card, not a solid green block */
+    .dye-dash-dropdown { background: rgba(43,39,37,.97) !important; border: 1px solid rgba(255,255,255,.12) !important; }
+    .dye-dash-dropdown-item + .dye-dash-dropdown-item { border-top-color: rgba(255,255,255,.10) !important; }
+    .dye-dash-dropdown-item:hover { background: rgba(61,192,120,.22) !important; }
+    /* dialogs: solid surface, so the page underneath does not show through the card */
+    [class*="modal"]:not([class*="backdrop"]):not([class*="actions"]):not([class*="error"]):not([class*="btn"]):not([class*="close"]),
+    .viz-overlay > div, #dye-note-overlay > div, #dye-add-note-overlay > div { background-color: #2b2725 !important; }
+    /* the two header icons (undo, copy shot) are black PNGs upstream: make them white and say what they do */
+    #dye-history-btn, #dye-clipboard-btn { display: flex !important; flex-direction: column; align-items: center; gap: 4px; }
+    #dye-history-btn img, #dye-clipboard-btn img { filter: invert(1) brightness(1.1); }
+    #dye-history-btn::after, #dye-clipboard-btn::after {
+      font: 600 17px/1.1 'Inter', sans-serif; color: var(--dye-label); white-space: nowrap; }
+    #dye-history-btn::after { content: "Undo"; }
+    #dye-clipboard-btn::after { content: "Copy this shot"; }
+    #dye-add-note-btn { border-radius: 9999px !important; }
+    /* +/- keys take the Bestpresso pill colour */
+    [class*="w-[72px]"][class*="h-[72px]"] { background: rgba(89,84,80,.8) !important; border-radius: 28px !important; }
+    /* rating stars: gold when filled, faint outline when empty */
+    .dye-star:not([fill="none"]) { fill: var(--dye-star) !important; stroke: var(--dye-star) !important; }
+    .dye-star[fill="none"] { stroke: rgba(255,255,255,.32) !important; }
+    /* focused field: lighter dark surface instead of upstream's white flash */
+    input:focus, textarea:focus, select:focus, [contenteditable="true"]:focus {
+      background: rgba(255,255,255,.14) !important; color: #f5f5f5 !important; caret-color: var(--mimoja-blue); }
+    input:focus::placeholder, textarea:focus::placeholder { color: #a8a29e; }
+    .dye-form-input-wrap:focus-within, .re-input-row:focus-within {
+      background: rgba(255,255,255,.10) !important; border-color: var(--mimoja-blue); }
+    .dye-form-input-wrap:focus-within .dye-form-input, .dye-form-input-wrap:focus-within .dye-form-textarea,
+    .re-input-row:focus-within .re-input { color: #f5f5f5; }
+

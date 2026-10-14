@@ -1,0 +1,737 @@
+[
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "    color: #fff;",
+  "replace": "    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinders.ts",
+  "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "    color: #fff;",
+  "replace": "    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/baskets.ts",
+  "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    color: #fff;",
+  "replace": "    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "    background: transparent; border: 1px dashed var(--mimoja-blue); color: var(--mimoja-blue);",
+  "replace": "    background: transparent; border: 1px dashed var(--mimoja-blue); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/equipment.ts",
+  "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bean-picker.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/grinder-picker.ts",
+  "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    background: #EDF0F4; padding: 0 46px 0 16px;",
+  "replace": "    background: var(--dye-field); padding: 0 46px 0 16px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "    background: #EDF0F4; padding: 0 14px; font-size: 19px;",
+  "replace": "    background: var(--dye-field); padding: 0 14px; font-size: 19px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/basket-picker.ts",
+  "find": "  .dye-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "    text-align: center; color: var(--mimoja-blue); background: transparent;",
+  "replace": "    text-align: center; color: var(--dye-label); background: transparent;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "  .dye-sort-btn.dye-sort-active { background: var(--mimoja-blue); color: #fff; border-color: var(--mimoja-blue); }",
+  "replace": "  .dye-sort-btn.dye-sort-active { background: var(--mimoja-blue); color: var(--dye-on-accent); border-color: var(--mimoja-blue); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "  .dye-card.dye-card-selected { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-card.dye-card-selected { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "  .dye-card-readmore { font-size: 16px; font-weight: 600; color: var(--mimoja-blue); cursor: pointer; }",
+  "replace": "  .dye-card-readmore { font-size: 16px; font-weight: 600; color: var(--dye-label); cursor: pointer; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "    background: var(--mimoja-blue); color: #fff; font-size: 20px; font-weight: 700; cursor: pointer; }",
+  "replace": "    background: var(--mimoja-blue); color: var(--dye-on-accent); font-size: 20px; font-weight: 700; cursor: pointer; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "  .dye-confirm-enabled  { background: var(--mimoja-blue); color: #fff; cursor: pointer; }",
+  "replace": "  .dye-confirm-enabled  { background: var(--mimoja-blue); color: var(--dye-on-accent); cursor: pointer; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/profile-picker.ts",
+  "find": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: #EDF0F4;",
+  "replace": "    width: 100%; height: 54px; border-radius: 12px; border: none; background: var(--dye-field);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/roasters.ts",
+  "find": "    text-align: center;\n    color: var(--mimoja-blue);",
+  "replace": "    text-align: center;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/roasters.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    border-color: var(--mimoja-blue);",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    border-color: var(--mimoja-blue);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/roasters.ts",
+  "find": "    border-color: var(--mimoja-blue);\n    color: #fff;",
+  "replace": "    border-color: var(--mimoja-blue);\n    color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/roasters.ts",
+  "find": "    border: 2px solid var(--mimoja-blue);\n    color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/roasters.ts",
+  "find": "    background: var(--mimoja-blue);\n    color: #fff;\n    cursor: pointer;",
+  "replace": "    background: var(--mimoja-blue);\n    color: var(--dye-on-accent);\n    cursor: pointer;"
+ },
+ {
+  "file": "dye2-plugin/src/utils/date-picker.ts",
+  "find": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid #C5CDDA;\n    background: var(--box-color); color: var(--mimoja-blue);",
+  "replace": "  .dye-dp-title { font-size: 24px; font-weight: 700; color: var(--dye-label); }\n  .dye-dp-nav {\n    width: 52px; height: 52px; border-radius: 15px; border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/utils/date-picker.ts",
+  "find": "  .dye-dp-nav:active { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-dp-nav:active { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/date-picker.ts",
+  "find": "  .dye-dp-day:active { background: #EDEDED; }\n  .dye-dp-day.dye-dp-muted { color: #C5CDDA; cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: #C5CDDA; }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-dp-day:active { background: var(--profile-button-background-color); }\n  .dye-dp-day.dye-dp-muted { color: var(--profile-button-outline-color); cursor: default; }\n  .dye-dp-day.dye-dp-today { border-color: var(--profile-button-outline-color); }\n  .dye-dp-day.dye-dp-sel { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/date-picker.ts",
+  "find": "    flex: 1; height: 56px; border-radius: 23px; border: 2px solid var(--mimoja-blue);\n    background: var(--box-color); color: var(--mimoja-blue);",
+  "replace": "    flex: 1; height: 56px; border-radius: 23px; border: 2px solid var(--mimoja-blue);\n    background: var(--box-color); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/utils/date-picker.ts",
+  "find": "  .dye-dp-btn-primary { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-dp-btn-primary { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "    text-align: center; color: var(--mimoja-blue); background: transparent;",
+  "replace": "    text-align: center; color: var(--dye-label); background: transparent;"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "  .dye-sort-btn.dye-sort-active { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-sort-btn.dye-sort-active { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "  .dye-card.dye-card-selected { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }\n  .dye-card-add {\n    border-color: var(--mimoja-blue); color: var(--mimoja-blue);",
+  "replace": "  .dye-card.dye-card-selected { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .dye-card-add {\n    border-color: var(--mimoja-blue); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "    width: 72px; height: 72px; background: #EDEDED;",
+  "replace": "    width: 72px; height: 72px; background: var(--profile-button-background-color);"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "  .dye-stepper-label { font-weight: 700; font-size: 24px; color: var(--mimoja-blue); }",
+  "replace": "  .dye-stepper-label { font-weight: 700; font-size: 24px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/shared-components.ts",
+  "find": "  .dye-preset.dye-preset-active { color: var(--mimoja-blue); font-weight: 700; }",
+  "replace": "  .dye-preset.dye-preset-active { color: var(--dye-label); font-weight: 700; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/add-bean.ts",
+  "find": "    font-size: 24px;\n    color: var(--mimoja-blue);",
+  "replace": "    font-size: 24px;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/add-bean.ts",
+  "find": "    text-transform: uppercase;\n    color: var(--mimoja-blue);",
+  "replace": "    text-transform: uppercase;\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/add-bean.ts",
+  "find": "  .dye-dropdown-item:hover, .dye-dropdown-item.dye-dropdown-highlight { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-dropdown-item:hover, .dye-dropdown-item.dye-dropdown-highlight { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "find": "  pressure:          '#17c29a',\n  flow:              '#0358cf',",
+  "replace": "  pressure:          '#3dc078',\n  flow:              '#4d8ff0',"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "find": "    font: { family: 'Inter, sans-serif', color: '#64748b', size: 13 },",
+  "replace": "    font: { family: 'Inter, sans-serif', color: '#a8a29e', size: 13 },"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "find": "    xaxis: {\n      gridcolor:  '#e2e8f0',\n      linecolor:  '#e2e8f0',\n      tickcolor:  '#e2e8f0',\n      tickfont:   { color: '#64748b' },",
+  "replace": "    xaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "find": "    yaxis: {\n      gridcolor:  '#e2e8f0',\n      linecolor:  '#e2e8f0',\n      tickcolor:  '#e2e8f0',\n      tickfont:   { color: '#64748b' },",
+  "replace": "    yaxis: {\n      gridcolor:  'rgba(255,255,255,0.10)',\n      linecolor:  'rgba(255,255,255,0.10)',\n      tickcolor:  'rgba(255,255,255,0.10)',\n      tickfont:   { color: '#a8a29e' },"
+ },
+ {
+  "file": "dye2-plugin/src/utils/chart.ts",
+  "find": "    pressure:          { x: [], y: [], name: 'Pressure',         type: 'scatter', mode: 'lines', line: { color: '#17c29a', width: 2 },              hoverinfo: 'name' },\n    flow:              { x: [], y: [], name: 'Flow',             type: 'scatter', mode: 'lines', line: { color: '#0358cf', width: 2 },              hoverinfo: 'name' },",
+  "replace": "    pressure:          { x: [], y: [], name: 'Pressure',         type: 'scatter', mode: 'lines', line: { color: '#3dc078', width: 2 },              hoverinfo: 'name' },\n    flow:              { x: [], y: [], name: 'Flow',             type: 'scatter', mode: 'lines', line: { color: '#4d8ff0', width: 2 },              hoverinfo: 'name' },"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    color: #B6C3D7;",
+  "replace": "    color: #a8a29e;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "  .dye-grinder-tab.active { color: var(--mimoja-blue); }",
+  "replace": "  .dye-grinder-tab.active { color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    border: 2px solid #C5CDDA;\n    background: white;\n    color: #5F7BA8;",
+  "replace": "    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color);\n    color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "  .dye-recipe-pill.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .dye-recipe-pill.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    background: var(--mimoja-blue); color: #fff;",
+  "replace": "    background: var(--mimoja-blue); color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "  .viz-logged-in-user { font-weight: 700; color: var(--mimoja-blue); }",
+  "replace": "  .viz-logged-in-user { font-weight: 700; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-hidden\">",
+  "replace": "    <div class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-hidden\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--mimoja-blue)] font-semibold text-[30px] leading-[1.2]\">Last Shot: \u2014</div>",
+  "replace": "            <div id=\"dye-last-shot-label\" class=\"text-[var(--dye-label)] font-semibold text-[30px] leading-[1.2]\">Last Shot: \u2014</div>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <button id=\"dye-search-btn\" class=\"text-[var(--mimoja-blue)] cursor-pointer\">",
+  "replace": "            <button id=\"dye-search-btn\" class=\"text-[var(--dye-label)] cursor-pointer\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                <span class=\"text-[var(--mimoja-blue)] font-semibold text-[24px] whitespace-nowrap\">All Shots</span>",
+  "replace": "                <span class=\"text-[var(--dye-label)] font-semibold text-[24px] whitespace-nowrap\">All Shots</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <button id=\"dye-settings-btn\" class=\"flex items-center gap-[10px] border-2 border-[var(--mimoja-blue)] text-[var(--mimoja-blue)] rounded-[23px] h-[54px] px-[20px] cursor-pointer\">",
+  "replace": "            <button id=\"dye-settings-btn\" class=\"flex items-center gap-[10px] border-2 border-[var(--mimoja-blue)] text-[var(--dye-label)] rounded-[23px] h-[54px] px-[20px] cursor-pointer\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <button id=\"dye-visualizer-btn\" class=\"flex items-center gap-[10px] border-2 border-[var(--mimoja-blue)] text-[var(--mimoja-blue)] rounded-[23px] h-[54px] px-[20px] cursor-pointer\">",
+  "replace": "            <button id=\"dye-visualizer-btn\" class=\"flex items-center gap-[10px] border-2 border-[var(--mimoja-blue)] text-[var(--dye-label)] rounded-[23px] h-[54px] px-[20px] cursor-pointer\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <div class=\"text-[var(--mimoja-blue)] font-semibold text-[30px] leading-[1.2]\">Next Shot Planning</div>",
+  "replace": "            <div class=\"text-[var(--dye-label)] font-semibold text-[30px] leading-[1.2]\">Next Shot Planning</div>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "          <button id=\"dye-recipe-prev\" class=\"flex items-center justify-center shrink-0 cursor-pointer text-[var(--mimoja-blue)]\">",
+  "replace": "          <button id=\"dye-recipe-prev\" class=\"flex items-center justify-center shrink-0 cursor-pointer text-[var(--dye-label)]\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "          <button id=\"dye-recipe-next\" class=\"flex items-center justify-center shrink-0 cursor-pointer text-[var(--mimoja-blue)]\">",
+  "replace": "          <button id=\"dye-recipe-next\" class=\"flex items-center justify-center shrink-0 cursor-pointer text-[var(--dye-label)]\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "          <div id=\"dye-profile-name\" class=\"text-[var(--mimoja-blue)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">\u2014</div>",
+  "replace": "          <div id=\"dye-profile-name\" class=\"text-[var(--dye-label)] font-semibold text-[24px] leading-[1.2] text-center truncate cursor-pointer\" title=\"Choose a profile\">\u2014</div>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Dose</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-dose-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-dose-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-dose-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">Drink</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-drink-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                  <button id=\"dye-drink-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span id=\"dye-grind-label\" class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px] cursor-pointer\">Grind</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-grind-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-grind-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-grind-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "                <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[#EDEDED] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>",
+  "replace": "                <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[75px]\">RPM</span>\n                <div class=\"flex items-center gap-[24px]\">\n                  <button id=\"dye-rpm-minus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>\n                  <span id=\"dye-rpm-value\" class=\"font-bold text-[26px] text-[var(--text-primary)] w-[72px] text-center\">\u2014</span>\n                  <button id=\"dye-rpm-plus\" class=\"flex items-center justify-center w-[72px] h-[72px] bg-[var(--profile-button-background-color)] rounded-[15px] cursor-pointer\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"var(--text-primary)\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"5\" x2=\"12\" y2=\"19\"/><line x1=\"5\" y1=\"12\" x2=\"19\" y2=\"12\"/></svg></button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "              <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[69px] shrink-0\">Beans</span>",
+  "replace": "              <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[69px] shrink-0\">Beans</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)] w-[69px] shrink-0\">Basket</span>",
+  "replace": "            <span class=\"font-bold text-[24px] text-[var(--dye-label)] w-[69px] shrink-0\">Basket</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "              <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)]\">Barista</span>",
+  "replace": "              <span class=\"font-bold text-[24px] text-[var(--dye-label)]\">Barista</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "              <span class=\"font-bold text-[24px] text-[var(--mimoja-blue)]\">Drinker</span>",
+  "replace": "              <span class=\"font-bold text-[24px] text-[var(--dye-label)]\">Drinker</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "            <button id=\"dye-add-note-btn\" class=\"border-2 border-[var(--mimoja-blue)] text-[var(--mimoja-blue)] rounded-[8px] px-[16px] py-[1px] leading-[1.2] font-semibold text-[24px] cursor-pointer whitespace-nowrap ml-auto\">",
+  "replace": "            <button id=\"dye-add-note-btn\" class=\"border-2 border-[var(--mimoja-blue)] text-[var(--dye-label)] rounded-[8px] px-[16px] py-[1px] leading-[1.2] font-semibold text-[24px] cursor-pointer whitespace-nowrap ml-auto\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "          <button id=\"dye-clear-btn\" class=\"border-2 border-[var(--mimoja-blue)] text-[var(--mimoja-blue)] rounded-[23px] px-[30px] h-[54px] font-semibold text-[21px] cursor-pointer\">Clear</button>",
+  "replace": "          <button id=\"dye-clear-btn\" class=\"border-2 border-[var(--mimoja-blue)] text-[var(--dye-label)] rounded-[23px] px-[30px] h-[54px] font-semibold text-[21px] cursor-pointer\">Clear</button>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+ },
+ {
+  "file": "dye2-plugin/src/pages/dashboard.ts",
+  "find": "    'background:var(--mimoja-blue);color:#fff;padding:14px 28px;border-radius:12px;' +",
+  "replace": "    'background:var(--mimoja-blue);color: var(--dye-on-accent);padding:14px 28px;border-radius:12px;' +"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  .edit-label { font-weight: 700; font-size: 24px; color: var(--mimoja-blue); }",
+  "replace": "  .edit-label { font-weight: 700; font-size: 24px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  .beans-read-more { font-size: 20px; font-weight: 700; color: var(--mimoja-blue); cursor: pointer; margin-top: 4px; }",
+  "replace": "  .beans-read-more { font-size: 20px; font-weight: 700; color: var(--dye-label); cursor: pointer; margin-top: 4px; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  .notes-modal h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: var(--mimoja-blue); }",
+  "replace": "  .notes-modal h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "    background: var(--mimoja-blue); color: #fff;",
+  "replace": "    background: var(--mimoja-blue); color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "    border: 2px solid var(--mimoja-blue); color: var(--mimoja-blue); border-radius: 23px;",
+  "replace": "    border: 2px solid var(--mimoja-blue); color: var(--dye-label); border-radius: 23px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  .read-from-item:hover { background: var(--mimoja-blue); color: #fff; }\n  .equip-edit-icon { display: flex; flex-shrink: 0; color: var(--mimoja-blue); }",
+  "replace": "  .read-from-item:hover { background: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .equip-edit-icon { display: flex; flex-shrink: 0; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  .equip-value-row label { width: 160px; flex-shrink: 0; font-weight: 700; font-size: 24px; color: var(--mimoja-blue); }",
+  "replace": "  .equip-value-row label { width: 160px; flex-shrink: 0; font-weight: 700; font-size: 24px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "        Editing &nbsp;<span id=\"es-shot-label\" class=\"text-[var(--mimoja-blue)]\">Last Shot</span>",
+  "replace": "        Editing &nbsp;<span id=\"es-shot-label\" class=\"text-[var(--dye-label)]\">Last Shot</span>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">",
+  "replace": "    <div class=\"flex flex-col w-[960px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[32px] gap-[28px]\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+ },
+ {
+  "file": "dye2-plugin/src/pages/edit-shot.ts",
+  "find": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:4px 8px';",
+  "replace": "  input.style.cssText = 'width:100%;font:inherit;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:4px 8px';"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "    --af-border: #C9C9C9;\n    --af-text: #121212;\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: #C5CDDA;\n    --af-tab-text: #5F7BA8;",
+  "replace": "    --af-border: rgba(255,255,255,0.28);\n    --af-text: var(--text-primary, #121212);\n    --af-action: var(--mimoja-blue, #385A92);\n    --af-tab-stroke: var(--profile-button-outline-color);\n    --af-tab-text: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "  .afav-header #dye-confirm-btn { background: var(--af-action); color: #fff; }",
+  "replace": "  .afav-header #dye-confirm-btn { background: var(--af-action); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "    color: var(--af-action); text-align: center; padding-bottom: 10px;",
+  "replace": "    color: var(--dye-label, var(--af-action)); text-align: center; padding-bottom: 10px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "    color: var(--af-action); white-space: nowrap;",
+  "replace": "    color: var(--dye-label, var(--af-action)); white-space: nowrap;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "    background: var(--af-action); border-color: var(--af-action); color: #fff;",
+  "replace": "    background: var(--af-action); border-color: var(--af-action); color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "  .dye-card.dye-card-selected .fav-card-date { color: #fff; }",
+  "replace": "  .dye-card.dye-card-selected .fav-card-date { color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-favs.ts",
+  "find": "    color: var(--af-action); padding: 10px 2px 0;",
+  "replace": "    color: var(--dye-label, var(--af-action)); padding: 10px 2px 0;"
+ },
+ {
+  "file": "dye2-plugin/src/utils/equipment-field.ts",
+  "find": "  .read-from-item:hover { background: var(--mimoja-blue); color: #fff; }\n  .equip-edit-icon { display: flex; flex-shrink: 0; color: var(--mimoja-blue); }",
+  "replace": "  .read-from-item:hover { background: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .equip-edit-icon { display: flex; flex-shrink: 0; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/equipment-field.ts",
+  "find": "  .eq-values-modal h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: var(--mimoja-blue); }",
+  "replace": "  .eq-values-modal h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/utils/equipment-field.ts",
+  "find": "    background: var(--mimoja-blue); color: #fff;",
+  "replace": "    background: var(--mimoja-blue); color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/utils/equipment-field.ts",
+  "find": "  .equip-value-row label { width: 160px; flex-shrink: 0; font-weight: 700; font-size: 24px; color: var(--mimoja-blue); }",
+  "replace": "  .equip-value-row label { width: 160px; flex-shrink: 0; font-weight: 700; font-size: 24px; color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
+  "find": "  .afe-label { font-size: 24px; font-weight: 600; color: var(--mimoja-blue); margin-bottom: 8px; }",
+  "replace": "  .afe-label { font-size: 24px; font-weight: 600; color: var(--dye-label); margin-bottom: 8px; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
+  "find": "    background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff;",
+  "replace": "    background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/auto-fav-edit.ts",
+  "find": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">",
+  "replace": "    <div class=\"flex flex-col w-[720px] shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[48px] py-[36px] gap-[28px]\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  /* Figma 2396:728: fixed 270x60 pills, stroke #C5CDDA, text #5F7BA8 */",
+  "replace": "  /* Figma 2396:728: fixed 270x60 pills, stroke var(--profile-button-outline-color), text var(--dye-label) */"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid #C5CDDA;\n    background: var(--box-color); color: #5F7BA8;",
+  "replace": "    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 21px;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--mimoja-blue); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px #C9C9C9, square) holding text + edit icon */",
+  "replace": "  .re-tab.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }\n  .re-label { font-size: 24px; font-weight: 700; color: var(--dye-label); margin-bottom: 8px; }\n  /* Figma 2396:747: label sits inline beside the input, 164px wide */\n  .re-field-label { font-size: 24px; font-weight: 700; color: var(--dye-label); width: 164px; flex-shrink: 0; }\n  /* Figma 2396:749: one bordered box (2px rgba(255,255,255,0.28), square) holding text + edit icon */"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    border: 2px solid #C9C9C9; background: var(--box-color);",
+  "replace": "    border: 2px solid rgba(255,255,255,0.28); background: var(--box-color);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid #C5CDDA;\n    background: var(--box-color); color: #5F7BA8;",
+  "replace": "    font-family: 'Inter', sans-serif; font-size: 21px; font-weight: 600; line-height: 1.2;\n    border: 2px solid var(--profile-button-outline-color);\n    background: var(--box-color); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-chip.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .re-chip.active { background: var(--mimoja-blue); border-color: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    font-size: 21px; font-weight: 600; color: var(--mimoja-blue); cursor: pointer;",
+  "replace": "    font-size: 21px; font-weight: 600; color: var(--dye-label); cursor: pointer;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-var-label { font-size: 22px; font-weight: 700; color: var(--mimoja-blue); margin-bottom: 2px; }",
+  "replace": "  .re-var-label { font-size: 22px; font-weight: 700; color: var(--dye-label); margin-bottom: 2px; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    color: #B6C3D7;",
+  "replace": "    color: #a8a29e;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-grinder-chip.active { color: var(--mimoja-blue); font-weight: 700; }",
+  "replace": "  .re-grinder-chip.active { color: var(--dye-label); font-weight: 700; }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    border: 2px solid var(--mimoja-blue); color: var(--mimoja-blue); border-radius: 23px;",
+  "replace": "    border: 2px solid var(--mimoja-blue); color: var(--dye-label); border-radius: 23px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-show-streamline.on  { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .re-show-streamline.on  { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .read-from-item:hover { background: var(--mimoja-blue); color: #fff; }",
+  "replace": "  .read-from-item:hover { background: var(--mimoja-blue); color: var(--dye-on-accent); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "  .re-mode-seg.active { color: var(--mimoja-blue); }",
+  "replace": "  .re-mode-seg.active { color: var(--dye-label); }"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-white border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">",
+  "replace": "    <div id=\"re-left\" class=\"flex flex-col w-1/2 shrink-0 bg-[var(--box-color)] border-r border-[var(--profile-button-outline-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-white overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--mimoja-blue)]\">Dashboard Variables</div>",
+  "replace": "    <div id=\"re-right\" class=\"flex flex-col flex-1 bg-[var(--box-color)] overflow-y-auto px-[38px] py-[28px] gap-[30px]\">\n      <div class=\"text-[30px] font-bold text-[var(--dye-label)]\">Dashboard Variables</div>"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "function makeValueEditable(valueId, min, max, formatter) {",
+  "replace": "function makeValueEditable(valueId, min, max, formatter, onChange) {\n  if (!window.bpSlider) return bpOrigMakeValueEditable(valueId, min, max, formatter, onChange);\n  const valEl = document.getElementById(valueId);\n  if (!valEl || valEl.dataset.editable) return;\n  valEl.dataset.editable = '1';\n  valEl.style.cursor = 'pointer';\n  valEl.addEventListener('click', (e) => {\n    e.stopPropagation();\n    window.bpSlider.openField(valueId, valEl, min, max, formatter, (v) => {\n      valEl.textContent = formatter(v);\n      if (typeof onChange === 'function') onChange(v);\n      else if (typeof syncPresetActive === 'function') syncPresetActive(valueId.replace('-value', ''), formatter(v));\n    });\n  });\n}\nfunction bpOrigMakeValueEditable(valueId, min, max, formatter) {"
+ },
+ {
+  "file": "dye2-plugin/src/pages/recipe-edit.ts",
+  "find": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:#fff;color:inherit;outline:none;padding:2px 4px';",
+  "replace": "    input.style.cssText = 'width:90px;font:inherit;text-align:center;border:1px solid var(--mimoja-blue);border-radius:8px;background:var(--dye-field);color:inherit;outline:none;padding:2px 4px';"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bc-import.ts",
+  "find": "    color: var(--mimoja-blue); margin-bottom: 12px;",
+  "replace": "    color: var(--dye-label); margin-bottom: 12px;"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bc-import.ts",
+  "find": "    border: 2px solid var(--mimoja-blue); color: var(--mimoja-blue);",
+  "replace": "    border: 2px solid var(--mimoja-blue); color: var(--dye-label);"
+ },
+ {
+  "file": "dye2-plugin/src/pages/bc-import.ts",
+  "find": "  .bc-report .bc-upd  { color: var(--mimoja-blue); }",
+  "replace": "  .bc-report .bc-upd  { color: var(--dye-label); }"
+ }
+]

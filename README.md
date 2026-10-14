@@ -6,6 +6,8 @@ a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstr
 - **Enable the plugin and a bean button appears next to Sleep.** Disable or remove it and the button
   goes away (within 30 seconds, or at once when the app returns to the foreground).
 - **Tapping it opens DYE2** with a return link, so you land back in Bestpresso.
+- **Bestpresso look for DYE2.** Dark theme, green accents and the Bestpresso-style value slider are applied
+  to DYE2 at build time (`patches/dye2/03-restyle.mjs`, rules in `assets/dye2/`).
 - **Updates itself.** A daily workflow checks `xinghendri/bestpresso` and `decentespresso/dye2` for new
   tags (betas and patches included), rebuilds both, tests them and publishes.
 
