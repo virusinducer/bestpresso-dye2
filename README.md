@@ -3,7 +3,7 @@
 A DYE2 button for the [Bestpresso](https://github.com/xinghendri/bestpresso) Decaid skin, delivered as
 a Decaid plugin plus a patched skin, rebuilt automatically whenever either upstream moves.
 
-- **Enable the plugin and a bean button appears next to Sleep.** Disable or remove it and the button
+- **Enable the plugin and a DYE2 button appears next to Sleep.** Disable or remove it and the button
   goes away (within 30 seconds, or at once when the app returns to the foreground).
 - **Tapping it opens DYE2** with a return link, so you land back in Bestpresso.
 - **Bestpresso look for DYE2.** Dark theme, green accents and the Bestpresso-style value slider are applied
