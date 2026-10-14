@@ -5,7 +5,7 @@ import { editJson } from '../../scripts/lib/patch.mjs'
 // release number (1.0.N) because Decaid refuses downgrades and upstream versions are lower.
 export function apply({ root, upstreamTag, pluginVersion }) {
   editJson(join(root, 'dye2-plugin', 'manifest.src.json'), (manifest) => {
-    manifest.name = 'Streamline/DYE2 (Bestpresso edition)'
+    manifest.name = 'DYE2 for Bestpresso'
     manifest.version = pluginVersion
     manifest.description = `${manifest.description} Built from decentespresso/dye2 ${upstreamTag} with a Bestpresso button endpoint.`
     manifest.api.push({ id: 'bestpresso-button', type: 'http', data: {} })
