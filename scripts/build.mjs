@@ -62,9 +62,9 @@ cpSync(join(skinRoot, 'dist'), join(out, 'skin'), { recursive: true })
 // Plugin
 const dye2Root = join(work, 'dye2')
 clone('decentespresso/dye2', values.dye2, dye2Root)
-// The plugin version is exactly the version DYE2 itself declares (its manifest), which Decaid also
-// requires the release tag to match. It can differ from the git tag.
-const pluginVersion = JSON.parse(readFileSync(join(dye2Root, 'dye2-plugin', 'manifest.src.json'), 'utf8')).version
+// Like DYE2's own release workflow, the tag is the single source of truth for the plugin version
+// (its committed manifest lags behind the tag). Decaid requires the release tag to match it.
+const pluginVersion = values.dye2.replace(/^v/, '')
 await applyPatches('dye2', { root: dye2Root, repoRoot, upstreamTag: values.dye2, pluginVersion })
 const pluginDir = join(dye2Root, 'dye2-plugin')
 run('npm', ['ci', '--silent'], pluginDir)

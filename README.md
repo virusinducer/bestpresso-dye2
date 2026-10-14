@@ -75,7 +75,7 @@ python3 test/e2e/button.e2e.py             # needs playwright + chromium
 - **Bestpresso** is by Hendri ([xinghendri/bestpresso](https://github.com/xinghendri/bestpresso)). The skin
   here is his work with a small patch for the DYE2 button. Hendri has said it is open source; the
   repository does not yet carry a LICENSE file.
-- **DYE2** is by the DYE2 makers at Decent Espresso ([decentespresso/dye2](https://github.com/decentespresso/dye2)).
+- **DYE2** is by Mark Chau and the DYE2 contributors at Decent Espresso ([decentespresso/dye2](https://github.com/decentespresso/dye2)).
   The plugin here is their work, restyled to match Bestpresso.
 - **Decaid** and the DE1 are by Decent Espresso.
 

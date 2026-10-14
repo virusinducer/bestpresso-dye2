@@ -143,7 +143,7 @@ jobs:
           fi
           gh release create "$tag" out/dye2.reaplugin-"$tag".zip \
             --title "$tag" \
-            --notes "DYE2 $DYE2_TAG by Decent Espresso (decentespresso/dye2), restyled for Bestpresso, with the DYE2 button endpoint. Matching skin: virusinducer/bestpresso-dye2-skin (Bestpresso $BESTPRESSO_TAG by Hendri)."
+            --notes "DYE2 $DYE2_TAG by Mark Chau (decentespresso/dye2), restyled for Bestpresso, with the DYE2 button endpoint. Matching skin: virusinducer/bestpresso-dye2-skin (Bestpresso $BESTPRESSO_TAG by Hendri)."
 
       - name: Open an issue when the build fails
         if: failure()
