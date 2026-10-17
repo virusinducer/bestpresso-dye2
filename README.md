@@ -81,3 +81,9 @@ python3 test/e2e/button.e2e.py             # needs playwright + chromium
 
 This repository contains only the patches, the button, the restyle and the build tooling. Upstream sources
 are fetched at build time and are not copied here.
+
+## Phone layout
+
+`patches/bestpresso/04-phone-layout.mjs` adds `assets/skin/phone.css` to the skin. Every rule in it sits inside a media query that only phones match (portrait width up to 520px, or landscape height up to 500px), so iPad and desktop keep the stock layout. It fits the dashboard on one screen and keeps the compact-left-side toggle working.
+
+To switch it off, delete `patches/bestpresso/04-phone-layout.mjs`, `assets/skin/phone.css` and `test/phone.test.mjs` (or revert the commit that added them), let the build republish, then remove and reinstall the skin in Decaid. The skin version does not change, so Decaid will not offer an update by itself.
